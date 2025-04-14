@@ -1,0 +1,6 @@
+-- SQL schema
+CREATE DATABASE property_app;
+USE property_app;
+CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255));
+CREATE TABLE contacts (id INT PRIMARY KEY AUTO_INCREMENT, user_id INT, name VARCHAR(255), phone VARCHAR(255));
+CREATE TABLE photos (id INT PRIMARY KEY AUTO_INCREMENT, user_id INT, name VARCHAR(255), url VARCHAR(255));

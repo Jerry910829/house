@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: property-app-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DB_HOST
+        value: your-db-host
+      - key: DB_USER
+        value: your-db-user
+      - key: DB_PASS
+        value: your-db-password
+      - key: DB_NAME
+        value: property_app
+      - key: SECRET_KEY
+        value: your_jwt_secret
+      - key: CLOUDINARY_CLOUD_NAME
+        value: your_cloud_name
+      - key: CLOUDINARY_API_KEY
+        value: your_cloudinary_key
+      - key: CLOUDINARY_API_SECRET
+        value: your_cloudinary_secret
